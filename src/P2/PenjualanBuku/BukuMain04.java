@@ -5,6 +5,7 @@ public class BukuMain04 {
     
     Buku04 bk1 = new Buku04();
     Buku04 bk2 = new Buku04("Self reward", "Maheera Ayesha", 160, 29, 59000);
+    Buku04 BukuHerry = new Buku04("TemanTapi?", "Candra wahaya", 256, 7, 67000);
 
     bk1.Judul = "Today Ends Tomorrow Comes";
     bk1.Pengarang = "Denanda Pratiwi";
@@ -26,6 +27,8 @@ public class BukuMain04 {
     // bk2.TampilkanInformasi();
     bk2.Terjual(11);
     bk2.TampilkanInformasi();
+
+    BukuHerry.TampilkanInformasi();
     
 
 

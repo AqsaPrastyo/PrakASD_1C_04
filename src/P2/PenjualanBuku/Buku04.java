@@ -2,9 +2,9 @@ package P2.PenjualanBuku;
 
 public class Buku04 {
 
-  public Buku04(){
+  // public Buku04(){
     
-  }
+  // }
 
   public Buku04(String Jud, String Pg, int Hal, int Stok, int har){
     Judul = Jud;
@@ -13,6 +13,8 @@ public class Buku04 {
     this.Stok = Stok;
     Harga = har;
 }
+
+  
   
     String Judul, Pengarang;
     int Halaman, Stok, Harga;

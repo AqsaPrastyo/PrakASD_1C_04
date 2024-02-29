@@ -23,7 +23,9 @@ public class BukuMain04 {
     bk2.Stok = 0;
     bk2.Harga = 275000;
 
-
+    bk2.TampilkanInformasi();
+    bk2.Terjual(4);
+    bk2.TampilkanInformasi();
     
 
 

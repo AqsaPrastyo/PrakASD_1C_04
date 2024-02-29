@@ -28,8 +28,12 @@ public class BukuMain04 {
     bk2.Terjual(11);
     bk2.TampilkanInformasi();
 
+    BukuHerry.Terjual(3);
     BukuHerry.TampilkanInformasi();
     
+    System.out.println(bk1.hitungHargaBayar());
+    System.out.println(bk2.hitungHargaBayar());
+    System.out.println(BukuHerry.hitungHargaBayar());
 
 
 

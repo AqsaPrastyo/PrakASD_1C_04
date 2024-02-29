@@ -2,7 +2,17 @@ package P2.PenjualanBuku;
 
 public class Buku04 {
 
-  
+  public Buku04(){
+    
+  }
+
+  public Buku04(String Jud, String Pg, int Hal, int Stok, int har){
+    Judul = Jud;
+    Pengarang = Pg;
+    Halaman = Hal;
+    this.Stok = Stok;
+    Harga = har;
+}
   
     String Judul, Pengarang;
     int Halaman, Stok, Harga;
@@ -29,12 +39,6 @@ public class Buku04 {
     void Gantiharga(int hrg){
       Harga = hrg;
     }
-
-
-
-
-
-
-
   
 }
+ 

@@ -16,7 +16,9 @@ public class Buku04 {
     }
 
     void Terjual(int jml){
-      Stok -= jml;  
+      if (Stok > 0) {
+        Stok -= jml; 
+      }  
       
     }
 

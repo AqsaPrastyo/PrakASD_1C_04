@@ -45,6 +45,7 @@ public class ArrayObject04 {
     for (int i = 0; i < 3; i++) {
       for (int j = 0; j < 3; j++) {
           ppArray[i][j] = new PersegiPanjang04();
+          ppArray[0][0] = new PersegiPanjang04();
           System.out.println("Persegi panjang ke-" + i + "," + j);
           System.out.print("Masukan panjang: ");
           ppArray[i][j].panjang = sc04.nextInt();

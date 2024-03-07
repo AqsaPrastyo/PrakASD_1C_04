@@ -12,6 +12,11 @@ public class Balok04 {
 
   }
 
+  public Balok04(int p, int l){
+    panjang = p;
+    lebar = l;
+  }
+
   public int hitungVolume(){
     return panjang * lebar * tinggi;
   }

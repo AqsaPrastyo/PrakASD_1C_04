@@ -14,7 +14,20 @@ public class Segitiga04 {
   }
 
 
+  void hitungLuas (){
+    double Luas =   0.5 * alas * tinggi;
+    System.out.println("Luas segitiga: " + Luas);
 
+  }
+  
+  void hitungKeliling(){
+    double sisiMiring = Math.sqrt((alas * alas) + (tinggi * tinggi));
+    double keliling = alas + tinggi + sisiMiring;
+    System.out.println("Keliling segitiga: " + keliling);
+
+
+
+  }
 
 
 }

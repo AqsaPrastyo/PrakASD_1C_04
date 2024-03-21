@@ -14,9 +14,10 @@ public class MainPangkat04 {
         for (int i = 0; i < png.length; i++) {
             png[i] = new Pangkat04();
             System.out.println("Masukan nilai yang hendak dipangkatkan: ");
-            png[i].nilai = sc04.nextInt(); // Simpan nilai yang dibaca ke dalam objek
+            png[i].nilai = sc04.nextInt(); 
             System.out.println("Masukan nilai pemangkat: ");
-            png[i].pangkat = sc04.nextInt(); // Simpan pangkat yang dibaca ke dalam objek
+            png[i].pangkat = sc04.nextInt(); 
+
         }
 
         System.out.println("HASIL PANGKAT - BRUTE FORCE");

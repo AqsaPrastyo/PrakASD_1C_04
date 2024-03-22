@@ -4,25 +4,44 @@ import java.util.Scanner;
 
 public class MainSum04 {
   public static void main(String[] args) {
-    Scanner sc04 = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
 
     System.out.println("------------------------");
-    System.out.println("Program menghitung keuntungan total (satuan juta. misal 5.9 )");
-    System.out.print("Masukan jumlah bulan: ");
-    int elm = sc04.nextInt();
+    System.out.println("Program menghitung keuntungan total perusahaan (satuan juta. misal 5.9 )");
 
-    Sum04 sm = new Sum04(elm);
-    System.out.println("============================");
-    for (int i = 0; i < sm.elemen; i++) {
-      System.out.println("Masukan untung bulan ke - "+(i+1)+" = ");
-      sm.keuntungan[i] = sc04.nextDouble();
+    
+    System.out.print("Masukan jumlah perusahaan: ");
+    int JmlPerusahaan = sc.nextInt();
+    sc.nextLine(); 
+
+    
+    Sum04[] perusahaan = new Sum04[JmlPerusahaan];
+
+    
+    for (int i = 0; i < JmlPerusahaan; i++) {
+      System.out.println("============================");
+      System.out.println("Perusahaan " + (i + 1));
+      System.out.print("Masukan jumlah bulan: ");
+      int bulan = sc.nextInt();
+      sc.nextLine(); 
+      perusahaan[i] = new Sum04(bulan);
+
+      for (int j = 0; j < perusahaan[i].elemen; j++) {
+        System.out.println("Masukan untung bulan ke - " + (j + 1) + " = ");
+        perusahaan[i].keuntungan[j] = sc.nextDouble();
+      }
     }
 
+    
     System.out.println("==============================");
-    System.out.println("Algoritma Brute Force");
-    System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah = " + sm.totalBF(sm.keuntungan));
-    System.out.println("==============================");
-    System.out.println("Algoritma Divide Conquer");
-    System.out.println("Total keuntungan perusahaan selama " + sm.elemen + " bulan adalah = " + sm.totalDC(sm.keuntungan, 0, sm.elemen-1));
+    System.out.println("Total Keuntungan setiap Perusahaan");
+    for (int i = 0; i < JmlPerusahaan; i++) {
+      System.out.println("==============================");
+      System.out.println("Perusahaan " + (i + 1));
+      System.out.println("Algoritma Brute Force");
+      System.out.println("Total keuntungan perusahaan selama " + perusahaan[i].elemen + " bulan adalah = " + perusahaan[i].totalBF(perusahaan[i].keuntungan));
+      System.out.println("Algoritma Divide Conquer");
+      System.out.println("Total keuntungan perusahaan selama " + perusahaan[i].elemen + " bulan adalah = " + perusahaan[i].totalDC(perusahaan[i].keuntungan, 0, perusahaan[i].elemen - 1));
+    }
   }
 }

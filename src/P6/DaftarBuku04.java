@@ -46,20 +46,31 @@ void selectionSort(){
   }
 }
 
-void insertionSort(){
+// void insertionSort(){  // Insertion Ascending
+//   for (int i = 1; i < listBk.length; i++) {
+//     Buku04 temp = listBk[i];
+//     int j = i;
+//     while (j > 0 && listBk[j-1].stok > temp.stok) {
+//      listBk[j] = listBk[j-1];
+
+//       j--;
+//     }
+//     listBk[j] = temp;
+//   }
+// }
+
+void insertionSort(){  // Insertion Descending
   for (int i = 1; i < listBk.length; i++) {
     Buku04 temp = listBk[i];
     int j = i;
-    while (j > 0 && listBk[j-1].stok > temp.stok) {
+    while (j > 0 && listBk[j-1].stok < temp.stok) {
      listBk[j] = listBk[j-1];
-     
+
       j--;
     }
     listBk[j] = temp;
   }
 }
-
-
 
 
 

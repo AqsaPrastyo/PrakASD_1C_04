@@ -29,6 +29,14 @@ System.out.println("Data setelah diurutkan secara Asc berdasarkan stock");
 ListBuku.bubbleSort();
 ListBuku.tampil();
 
+System.out.println("=========================");
+System.out.println("Data setelah diurutkan secara Desc berdasarkan stock menggunakan Selection sort");
+ListBuku.selectionSort();
+ListBuku.tampil();
 
+System.out.println("=========================");
+System.out.println("Data setelah diurutkan secara Desc berdasarkan stock menggunakan Insertion sort");
+ListBuku.insertionSort();
+ListBuku.tampil();
   }
 }

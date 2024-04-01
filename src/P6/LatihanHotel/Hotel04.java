@@ -28,7 +28,7 @@ public class Hotel04 {
     public byte Bintang() {
         return bintang;
     }
-    public String toString() {
+    public String DisplayHotel() {
         return "Nama Hotel: " + nama + ", Kota: " + kota + ", Harga: " + harga + ", Bintang: " + bintang;
     }
 }

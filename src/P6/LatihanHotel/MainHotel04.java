@@ -12,11 +12,19 @@ public class MainHotel04 {
     hotelService.tampilAll();
 
     System.out.println("\nSetelah diurutkan berdasarkan harga menggunakan Bubble Sort:");
-    hotelService.bubbleSort();
+    hotelService.bubbleSortHarga();
+    hotelService.tampilAll();
+
+    System.out.println("\nSetelah diurutkan berdasarkan harga menggunakan Selection Sort:");
+    hotelService.selectionSortHarga();
+    hotelService.tampilAll();
+
+    System.out.println("\nSetelah diurutkan berdasarkan harga menggunakan Bubble Sort:");
+    hotelService.bubbleSortBintang();
     hotelService.tampilAll();
 
     System.out.println("\nSetelah diurutkan berdasarkan rating menggunakan Selection Sort:");
-    hotelService.selectionSort();
+    hotelService.selectionSortBintang();
     hotelService.tampilAll();
 }
 }

@@ -20,11 +20,11 @@ public class HotelService04 {
 
     public void tampilAll() {
         for (int i = 0; i < noRuang; i++) {
-            System.out.println(ruang[i]);
+            System.out.println(ruang[i].DisplayHotel());
         }
     }
 
-    public void bubbleSort() {
+    public void bubbleSortHarga() {
         for (int i = 0; i < noRuang - 1; i++) {
             for (int j = 0; j < noRuang - i - 1; j++) {
                 if (ruang[j].Harga() > ruang[j + 1].Harga()) {
@@ -36,7 +36,33 @@ public class HotelService04 {
         }
     }
 
-    public void selectionSort() {
+    public void selectionSortHarga() {
+        for (int i = 0; i < noRuang - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < noRuang; j++) {
+                if (ruang[j].Harga() < ruang[minIndex].Harga()) {
+                    minIndex = j;
+                }
+            }
+            Hotel04 temp = ruang[minIndex];
+            ruang[minIndex] = ruang[i];
+            ruang[i] = temp;
+        }
+    }
+
+    public void bubbleSortBintang() {
+        for (int i = 0; i < noRuang - 1; i++) {
+            for (int j = 0; j < noRuang - i - 1; j++) {
+                if (ruang[j].Bintang() < ruang[j + 1].Bintang()) {
+                    Hotel04 temp = ruang[j];
+                    ruang[j] = ruang[j + 1];
+                    ruang[j + 1] = temp;
+                }
+            }
+        }
+    }    
+    
+    public void selectionSortBintang() {
         for (int i = 0; i < noRuang - 1; i++) {
             int minIndex = i;
             for (int j = i + 1; j < noRuang; j++) {

@@ -70,6 +70,12 @@ ListBuku.tampil();
     ListBuku.TampilPosisi(cari, posisi);
 ListBuku.TampilData     (cari, posisi);
 
+Buku04 dataBuku = ListBuku.FindBuku(cari);
+if (dataBuku != null) {
+    dataBuku.tampilDataBuku();
+} else {
+    System.out.println("Buku tidak ditemukan.");
+}
 
 
 

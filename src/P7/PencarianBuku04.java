@@ -50,6 +50,14 @@ public void TampilData(int x, int pos){
   }
 }
 
+public Buku04 FindBuku(int cari) {
+  for (int j = 0; j < listBk.length; j++) {
+      if (listBk[j].kodeBuku == cari) {
+          return listBk[j];
+      }
+  }
+  return null;
+}
 
 
 

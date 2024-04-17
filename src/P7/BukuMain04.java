@@ -21,11 +21,11 @@ Buku04 m4 =  new Buku04(127, "Etika Mahasiswa", 2023, "Darmawan Adi", 1);
 
 PencarianBuku04 ListBuku = new PencarianBuku04();
 
-ListBuku. tambah(m);
-ListBuku.tambah (m1);
-ListBuku.tambah(m2);
+ListBuku. tambah(m2);
+ListBuku.tambah (m);
+ListBuku.tambah(m4);
 ListBuku. tambah (m3);
-ListBuku.tambah(m4); 
+ListBuku.tambah(m1); 
 
 
 System.out.println("-----------------------------------------------------------");

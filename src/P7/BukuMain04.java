@@ -21,17 +21,18 @@ Buku04 m4 =  new Buku04(127, "Etika Mahasiswa", 2023, "Darmawan Adi", 1);
 
 PencarianBuku04 ListBuku = new PencarianBuku04();
 
-ListBuku. tambah(m2);
-ListBuku.tambah (m3);
-ListBuku.tambah(m);
-ListBuku. tambah (m4);
-ListBuku.tambah(m1); 
+ListBuku. tambah(m);
+ListBuku.tambah (m1);
+ListBuku.tambah(m2);
+ListBuku. tambah (m3);
+ListBuku.tambah(m4); 
 
 
 System.out.println("-----------------------------------------------------------");
 
 System.out.println("Masukkan data Buku secara Urut dari KodeBuku Terkecil,: ");
 ListBuku.tampil();
+
 
 
 // for (int i=0; i <jumBuku; i++) { 
@@ -65,10 +66,11 @@ ListBuku.tampil();
     System.out.println("Masukan kode buku yang dicari: ");
     System.out.println("Kode buku: ");
     int cari = s.nextInt();
+
     System.out.println("Menggunakan Sequential Search");
     int posisi = ListBuku.FindSeqSearch(cari);
     ListBuku.TampilPosisi(cari, posisi);
-ListBuku.TampilData     (cari, posisi);
+    ListBuku.TampilData     (cari, posisi);
 
 Buku04 dataBuku = ListBuku.FindBuku(cari);
 if (dataBuku != null) {
@@ -77,8 +79,15 @@ if (dataBuku != null) {
     System.out.println("Buku tidak ditemukan.");
 }
 
+System.out.println("Data buku setelah diurutkan:");
+    ListBuku.tampil();
 
 
+
+    System.out.println("Menggunakan Binary Search");
+     posisi = ListBuku.FindBinarySearch(cari, 0, ListBuku.idx - 1);
+    ListBuku.TampilPosisi(cari, posisi);
+    ListBuku.TampilData(cari, posisi);
 
 
   }

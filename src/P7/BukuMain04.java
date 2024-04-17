@@ -12,20 +12,20 @@ Scanner s1 = new Scanner(System.in);
 PencarianBuku04 data = new PencarianBuku04(); 
 int jumBuku = 5;
 
-Buku04 m = new Buku04(111, "Algoritma", 2019, "Wahyuni", 5);
-Buku04 m1 = new Buku04(123, "Big Data", 2020, "Susilo", 3);
-Buku04 m2 = new Buku04(125, "Desain UI", 2021, "Supriadi", 6);
-Buku04 m3 = new Buku04(126, "Web Programing", 2022, "Pustaka Adi", 2);
-Buku04 m4 =  new Buku04(127, "Etika Mahasiswa", 2023, "Darmawan Adi", 1);
+Buku04 m = new Buku04(20215, "Algoritma", 2019, "Wahyuni", 5);
+Buku04 m1 = new Buku04(20214, "Big Data", 2020, "Susilo", 3);
+Buku04 m2 = new Buku04(20212, "Desain UI", 2021, "Supriadi", 6);
+Buku04 m3 = new Buku04(20211, "Web Programing", 2022, "Pustaka Adi", 2);
+Buku04 m4 =  new Buku04(20210, "Etika Mahasiswa", 2023, "Darmawan Adi", 1);
 
 
 PencarianBuku04 ListBuku = new PencarianBuku04();
 
-ListBuku. tambah(m2);
-ListBuku.tambah (m);
-ListBuku.tambah(m4);
+ListBuku. tambah(m);
+ListBuku.tambah (m1);
+ListBuku.tambah(m2);
 ListBuku. tambah (m3);
-ListBuku.tambah(m1); 
+ListBuku.tambah(m4); 
 
 
 System.out.println("-----------------------------------------------------------");

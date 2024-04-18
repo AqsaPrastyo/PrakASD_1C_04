@@ -78,4 +78,29 @@ public class Gudang04 {
         }
         return biner.toString();
     }
+
+
+    public Barang04 lihatBarangTerbawah() {
+        if (!cekKosong()) {
+            Barang04 barangTerbawah = tumpukan[0];
+            System.out.println("Barang terbawah " + barangTerbawah.nama);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan barang kosong.");
+            return null;
+        }
+    }
+    
+    
+    public boolean cariBarang(String nama) {
+        for (int i = top; i >= 0; i--) {
+            if (tumpukan[i].nama.equalsIgnoreCase(nama)) {
+                System.out.println("Barang dengan nama " + nama + " ditemukan: Kode " + tumpukan[i].kode);
+                return true;
+            }
+        }
+        System.out.println("Barang dengan nama " + nama + " tidak ditemukan.");
+        return false;
+    }
+    
 }

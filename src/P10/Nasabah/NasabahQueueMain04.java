@@ -36,6 +36,8 @@ public class NasabahQueueMain04 {
         Nasabah04 data = antri.Dequeue();
         if (!"".equals(data.norek) && !"".equals(data.nama) 
         && !"".equals(data.alamat) && !"".equals(data.umur) && !"".equals(data.saldo)) {
+          System.out.println("Antrian yang keluar: " + data.norek + " " + data.nama + " "
+          + data.alamat + " " + data.umur + " " + data.saldo);
           break;
         }
           

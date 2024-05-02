@@ -1,4 +1,4 @@
-package P10;
+package P10.Queue;
 
 import java.util.Scanner;
 

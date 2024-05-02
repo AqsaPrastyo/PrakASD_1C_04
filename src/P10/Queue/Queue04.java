@@ -1,4 +1,4 @@
-package P10;
+package P10.Queue;
 
 public class Queue04 {
   int data[];

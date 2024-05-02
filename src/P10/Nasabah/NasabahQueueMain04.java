@@ -47,7 +47,7 @@ public class NasabahQueueMain04 {
          antri.print();
           break;
         case 5:
-         antri.clear();
+         antri.peekRear();
           break;
 
         default:
@@ -62,6 +62,7 @@ public class NasabahQueueMain04 {
     System.out.println("2. Antrian Keluar");
     System.out.println("3. Cek antrian terdepan");
     System.out.println("4. Cek semua antrian");
+    System.out.println("5. Cek antrian dari belakang");
     System.out.println("-------------------------");
   }
 }

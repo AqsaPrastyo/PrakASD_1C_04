@@ -66,6 +66,8 @@ public void clear(){
 public void Enqueue(int dt){
 if (isFull04()) {
   System.out.println("Queue sudah penuh!");
+  System.exit(0);
+  // throw new NullPointerException("Enqueue operation is called on empty queue.");
 } else {
   if (isEmpty04()) {
     front = rear = 0;
@@ -85,6 +87,8 @@ public int Dequeue(){
   int dt = 0 ;
     if (isEmpty04()) {
       System.out.println("Queue masih kosong!");
+      System.exit(0);
+      // throw new NullPointerException("deQueue operation is called on empty queue.");
     } else {
       dt = data[front];
       size--;

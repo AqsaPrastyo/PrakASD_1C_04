@@ -3,7 +3,7 @@ package P12.Tugas1;
 import java.util.Scanner;
 
 public class PasienVaksinMain {
-    public static void main(String[] args) {
+    public static void main(String[] args)throws Exception {
         PasienVaksin queue = new PasienVaksin();
         Scanner scanner = new Scanner(System.in);
         int choice;
@@ -28,14 +28,10 @@ public class PasienVaksinMain {
                     queue.addLast(number, name);
                     System.out.println(name + " berhasil ditambahkan. Sisa antrian: " + queue.getSize());
                     break;
-                case 2:
-                    try {
+                case 2:   
                         String removedName = queue.head.name; 
                         queue.removeFirst();
                         System.out.println(removedName + " telah selesai divaksin. Sisa antrian: " + queue.getSize());
-                    } catch (Exception e) {
-                        System.out.println(e.getMessage());
-                    }
                     break;
                 case 3:
                     queue.print();
@@ -47,8 +43,6 @@ public class PasienVaksinMain {
                     System.out.println("Pilihan tidak valid.");
             }
         } while (choice != 4);
-
-        scanner.close();
     }
 }
 

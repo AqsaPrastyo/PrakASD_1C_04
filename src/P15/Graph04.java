@@ -64,4 +64,18 @@ public class Graph04 {
     }
     System.out.println();
   }
+
+public boolean isAdjascent(int asal, int tujuan){
+for (int i = 0; i < list[asal].size(); i++) {
+  try {
+    if (list[asal].get(i) == tujuan) {
+      return true;
+    }
+  } catch (Exception e) {
+    e.printStackTrace();
+  }
+}
+return false;
+}
+
 }

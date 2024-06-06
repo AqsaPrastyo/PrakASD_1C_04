@@ -1,7 +1,10 @@
 package P15;
 
+import java.util.Scanner;
+
 public class GraphMain04 {
   public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
     Graph04 gedung  = new Graph04(6);
     gedung.addEdge(0, 1, 50, true);
     gedung.addEdge(0, 2, 100, true);
@@ -34,6 +37,19 @@ public class GraphMain04 {
       
       e.printStackTrace();
     }
+    System.out.print("Masukan gedung asal: ");
+    int asal = scanner.nextInt();
+
+    System.out.print("Masukan gedung tujuan: ");
+    int tujuan = scanner.nextInt();
+
+    if (gedung.isAdjascent(asal, tujuan)) {
+      System.out.println("Gedung " + (char)('A' + asal) + " dan Gedung " + (char)('A' + tujuan) + " bertetangga");
+    } else {
+      System.out.println("Gedung " + (char)('A' + asal) + " dan Gedung " + (char)('A' + tujuan) + " tidak bertetangga");
+    }
+
+    scanner.close();
   }
   
 }

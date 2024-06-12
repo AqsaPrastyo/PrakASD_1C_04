@@ -80,7 +80,8 @@ public class GraphMain04 {
             System.out.println("4. Print Graph");
             System.out.println("5. Cek Edge");
             System.out.println("6. Update Jarak");
-            System.out.println("7. Exit");
+            System.out.println("7. Hitung Edge");
+            System.out.println("8. Exit");
             System.out.print("Pilih menu: ");
             int choice = scanner.nextInt();
 
@@ -147,6 +148,10 @@ public class GraphMain04 {
                     System.out.println("Jarak antara gedung " + (char)('A' + asalUpdate) + " dan gedung " + (char)('A' + tujuanUpdate) + " berhasil diupdate.\n");
                     break;
                 case 7:
+                    int totalEdge = gedung.hitungEdge();
+                    System.out.println("Total Edge dalam graf: " + totalEdge + "\n");
+                    break;
+                case 8:
                     running = false;
                     break;
                 default:

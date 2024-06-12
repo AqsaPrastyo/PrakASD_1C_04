@@ -76,7 +76,6 @@ public class Graph04 {
     }
 
     public void updateJarak(int asal, int tujuan, int newJarak) {
-       
         Node04 current = list[asal].head;
         while (current != null) {
             if (current.data == tujuan) {
@@ -85,8 +84,6 @@ public class Graph04 {
             }
             current = current.next;
         }
-
-        
         if (!isAdjacent(tujuan, asal)) {
             current = list[tujuan].head;
             while (current != null) {
@@ -97,5 +94,13 @@ public class Graph04 {
                 current = current.next;
             }
         }
+    }
+
+    public int hitungEdge() {
+        int totalEdge = 0;
+        for (int i = 0; i < vertex; i++) {
+            totalEdge += list[i].size();
+        }
+        return totalEdge;
     }
 }

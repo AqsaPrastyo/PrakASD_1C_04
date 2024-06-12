@@ -79,7 +79,8 @@ public class GraphMain04 {
             System.out.println("3. Degree");
             System.out.println("4. Print Graph");
             System.out.println("5. Cek Edge");
-            System.out.println("6. Exit");
+            System.out.println("6. Update Jarak");
+            System.out.println("7. Exit");
             System.out.print("Pilih menu: ");
             int choice = scanner.nextInt();
 
@@ -129,20 +130,30 @@ public class GraphMain04 {
                     int asalCek = scanner.nextInt();
                     System.out.print("Masukkan gedung tujuan: ");
                     int tujuanCek = scanner.nextInt();
-                    if (gedung.isAdjascent(asalCek, tujuanCek)) {
+                    if (gedung.isAdjacent(asalCek, tujuanCek)) {
                         System.out.println("Gedung " + (char)('A' + asalCek) + " dan Gedung " + (char)('A' + tujuanCek) + " bertetangga\n");
                     } else {
                         System.out.println("Gedung " + (char)('A' + asalCek) + " dan Gedung " + (char)('A' + tujuanCek) + " tidak bertetangga\n");
                     }
                     break;
                 case 6:
+                    System.out.print("Masukkan gedung asal: ");
+                    int asalUpdate = scanner.nextInt();
+                    System.out.print("Masukkan gedung tujuan: ");
+                    int tujuanUpdate = scanner.nextInt();
+                    System.out.print("Masukkan jarak baru: ");
+                    int newJarak = scanner.nextInt();
+                    gedung.updateJarak(asalUpdate, tujuanUpdate, newJarak);
+                    System.out.println("Jarak antara gedung " + (char)('A' + asalUpdate) + " dan gedung " + (char)('A' + tujuanUpdate) + " berhasil diupdate.\n");
+                    break;
+                case 7:
                     running = false;
                     break;
                 default:
                     System.out.println("Pilihan tidak valid. Silakan coba lagi.\n");
                     break;
             }
-      }
+        }
         scanner.close();
     }
 }

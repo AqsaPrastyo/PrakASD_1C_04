@@ -22,23 +22,23 @@ public class Graph04 {
     
   }
 
-  public void degree(int asal) throws Exception {
-    if (list[asal].isEmpty()) {
-      throw new Exception("Linked list kosong");
-    }
-    int totalIn = 0;
-    for (int i = 0; i < vertex; i++) {
-      for (int j = 0; j < list[i].size(); j++) {
-        if (list[i].get(j) == asal) {
-          totalIn++;
+    public void degree(int asal) throws Exception {
+      if (list[asal].isEmpty()) {
+        throw new Exception("Linked list kosong");
+      }
+      int totalIn = 0;
+      for (int i = 0; i < vertex; i++) {
+        for (int j = 0; j < list[i].size(); j++) {
+          if (list[i].get(j) == asal) {
+            totalIn++;
+          }
         }
       }
+      int totalOut = list[asal].size();
+      System.out.println("InDegree dari gedung " + (char)('A' + asal) + ": " + totalIn);
+      System.out.println("OutDegree dari gedung " + (char)('A' + asal) + ": " + totalOut);
+      System.out.println("Degree dari gedung " + (char)('A' + asal) + ": " + (totalIn + totalOut));
     }
-    int totalOut = list[asal].size();
-    System.out.println("InDegree dari gedung " + (char)('A' + asal) + ": " + totalIn);
-    System.out.println("OutDegree dari gedung " + (char)('A' + asal) + ": " + totalOut);
-    System.out.println("Degree dari gedung " + (char)('A' + asal) + ": " + (totalIn + totalOut));
-  }
 
   public void removeEdge(int asal, int tujuan) throws Exception {
     list[asal].remove(tujuan);
